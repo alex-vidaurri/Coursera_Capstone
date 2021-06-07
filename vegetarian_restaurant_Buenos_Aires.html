@@ -14274,8 +14274,11 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Buenos aires has been tough on fast food restaurants, lets take a look at the density of international famous chains vs local traditional food options. 
-Then we'll check how vegan food is being established to see how non traditional options can be established.</p>
+<p>The problem we'll try to solve is identify the neighborhoods that would be good options to open vegan restaurants in Buenos Aires Capital Federal (BSAS).</p>
+<p>Buenos aires has been tough on fast food restaurants, check the names of the pizza restaurants and you would not find the franchise names mentioned. On the other side other fast food restaurants such as McDonalds and Strarbucks have positioned and have some market share.</p>
+<p>Using geographical data from Google maps, we'll find the number of traditional restaurants (asado and pizzerias) and also non traditional ones (mcdonalds and starbucks) and use them to find clusters . Once we can cluster similar neighborhoods we'll check which neighborhoods have already accepted vegan restaurants and extrapolate to the neighbohoods in such cluster as good options for more vegan restaurants</p>
+<p>eg: Chacarita and Puerto Madero BSAS neihborhoods end in the same cluster and Puerto Madero already has accepted non Vegan restaurants, then Chacarita is a good option to open a Vegan restaurant</p>
+<p>The data will be provided by Wikipedia to find all the BSAS neighborhoods, then using google maps we'll find the Latitude and Longitude of each of them.  From there a 500m radius will be used to gather the restaurants per name, such as: pizzeria, asado, mcdonalds, starbucks. Each of these findings will be turned into a dimension using one hot encoding, then a normalized frequency and finaly a dimension to run KMeans algorithm</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
@@ -18197,7 +18200,8 @@ For now I'll use the 500 meter radius</p>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>With the data gathered Clusters 9,3 and 7 are the most likely to accept new restaurants like Vegan</p>
-<p>Cluster 3 has the most already (montserrat=4, Palermo=4) and likely neighborhood Retiro could accept more as San Nicolas has already the most by individual Neighborhood (7)</p>
+<p>Cluster 3 has the most already (montserrat=4, Palermo=4) and likely neighborhood Retiro in cluster 9 could accept more as San Nicolas has already the most by individual Neighborhood (7)</p>
+<p>San Telmo in cluster 7 has the second place in number ov vegan restaurants, therefore San Cristobal and Nuñez could also be good options for more vegan restaurants</p>
 
 </div>
 </div>
